@@ -123,7 +123,7 @@ export default function TroubleshootingDetail({
                         <p className="text-xs text-muted-foreground mb-1">
                           {cmd.vendor}
                         </p>
-                        <code className="text-sm text-foreground break-all font-mono">
+                        <code className="text-sm text-foreground break-all font-mono whitespace-pre-wrap">
                           {cmd.command}
                         </code>
                       </div>

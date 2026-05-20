@@ -34,7 +34,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-white/90 dark:bg-black/80"></div>
         <div className="relative container max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Guia de Redes por Tarcisio Cabral
+            Guia de Redes
           </h1>
           <p className="text-lg text-muted-foreground mb-8">
             Seu manual de bolso técnico com comandos essenciais para Cisco,

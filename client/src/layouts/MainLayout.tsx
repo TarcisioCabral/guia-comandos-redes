@@ -37,6 +37,15 @@ export default function MainLayout({ children }: MainLayoutProps) {
               <Wrench className="w-4 h-4" />
               <span className="hidden sm:inline">Solução de Problemas</span>
             </Button>
+            <Button
+              variant={location === "/troubleshooting-b2b" ? "secondary" : "ghost"}
+              size="sm"
+              onClick={() => setLocation("/troubleshooting-b2b")}
+              className="flex items-center gap-2"
+            >
+              <Wrench className="w-4 h-4" />
+              <span className="hidden sm:inline">Solução de Problemas B2B</span>
+            </Button>
           </div>
           <div className="flex items-center gap-2">
             <Button

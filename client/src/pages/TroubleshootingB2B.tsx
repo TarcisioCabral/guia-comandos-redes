@@ -1,14 +1,14 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { troubleshootingCategories } from "@/lib/troubleshooting-guides";
+import { troubleshootingB2BCategories } from "@/lib/troubleshooting-b2b-guides";
 import TroubleshootingCard from "@/features/troubleshooting/components/TroubleshootingCard";
 import TroubleshootingDetail from "@/features/troubleshooting/components/TroubleshootingDetail";
-import { useTroubleshootingFilter } from "@/features/troubleshooting/hooks/useTroubleshootingFilter";
+import { useTroubleshootingB2BFilter } from "@/features/troubleshooting/hooks/useTroubleshootingB2BFilter";
 import { Search, X } from "lucide-react";
 import MainLayout from "@/layouts/MainLayout";
 
-export default function Troubleshooting() {
+export default function TroubleshootingB2B() {
   const {
     searchQuery,
     setSearchQuery,
@@ -22,7 +22,7 @@ export default function Troubleshooting() {
     setSelectedGuideId,
     currentGuide,
     totalGuides,
-  } = useTroubleshootingFilter();
+  } = useTroubleshootingB2BFilter();
 
   if (currentGuide) {
     return (
@@ -43,11 +43,10 @@ export default function Troubleshooting() {
       <div className="bg-secondary border-b border-border">
         <div className="container max-w-6xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold text-foreground mb-2">
-            Solução de Problemas
+            Solução de Problemas B2B
           </h1>
           <p className="text-lg text-muted-foreground">
-            Guias passo a passo para resolver os problemas mais frequentes em
-            redes.
+            Guias especializados para problemas em ambientes corporativos e links dedicados.
           </p>
         </div>
       </div>
@@ -60,7 +59,7 @@ export default function Troubleshooting() {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <Input
               type="text"
-              placeholder="Buscar por problema, sintoma ou solução..."
+              placeholder="Buscar por problema B2B, VPN, MPLS..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-12 py-3 text-base shadow-sm"
@@ -76,7 +75,7 @@ export default function Troubleshooting() {
               Categorias
             </h2>
             <div className="flex flex-wrap gap-2">
-              {troubleshootingCategories.map((category) => (
+              {troubleshootingB2BCategories.map((category) => (
                 <Button
                   key={category}
                   variant={
@@ -166,7 +165,7 @@ export default function Troubleshooting() {
             Mostrando{" "}
             <span className="font-semibold">{filteredGuides.length}</span> de{" "}
             <span className="font-semibold">{totalGuides}</span>{" "}
-            guias
+            guias B2B
           </p>
         </div>
 
@@ -184,7 +183,7 @@ export default function Troubleshooting() {
         ) : (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
-              Nenhum guia encontrado. Tente outra busca ou filtro.
+              Nenhum guia B2B encontrado. Tente outra busca ou filtro.
             </p>
           </div>
         )}

@@ -8,6 +8,8 @@ import { Search, X } from "lucide-react";
 import MainLayout from "@/layouts/MainLayout";
 
 export default function Home() {
+  const heroBackgroundUrl = `${import.meta.env.BASE_URL}images/hero-background.jpg`;
+
   const {
     searchQuery,
     setSearchQuery,
@@ -27,7 +29,7 @@ export default function Home() {
       <div
         className="relative bg-cover bg-center py-16 md:py-24"
         style={{
-          backgroundImage: "url(/images/hero-background.jpg)",
+          backgroundImage: `url(${heroBackgroundUrl})`,
           backgroundAttachment: "fixed",
         }}
       >

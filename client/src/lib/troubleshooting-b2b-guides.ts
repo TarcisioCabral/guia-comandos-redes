@@ -317,7 +317,7 @@ export const troubleshootingB2BGuides: TroubleshootingGuide[] = [
     id: "b2b-products-info",
     title: "Produtos B2B (IP Dedicado, LTL, Wifeed)",
     description: "Informações sobre a arquitetura dos produtos B2B Master.",
-    severity: "info",
+    severity: "low",
     category: "Produtos",
     symptoms: [
       "Dúvida sobre topologia de um produto"
@@ -894,7 +894,7 @@ export const troubleshootingB2BGuides: TroubleshootingGuide[] = [
     id: "conceitos-vlan-detalhado",
     title: "Switch de Agregação e Acesso: VLANs e Portas",
     description: "Conceitos fundamentais de comunicação Camada 2, tipos de VLAN e configurações de interface.",
-    severity: "info",
+    severity: "low",
     category: "Teoria",
     symptoms: [
       "Dúvidas sobre Tagged vs Untagged",
